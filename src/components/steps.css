@@ -72,36 +72,69 @@
 
 /* Detail panels containing description */
 .steps-content-panels {
-  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 3rem;
-  min-height: 380px;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .step-content-panel {
   display: none;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  position: relative;
   animation: fadeIn 0.4s ease forwards;
 }
 
 .step-content-panel.active {
-  display: block;
+  display: flex;
+}
+
+.step-panel-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.step-panel-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 9, 10, 0.4);
+  z-index: 2;
+}
+
+.step-panel-inner {
+  position: relative;
+  z-index: 3;
+  margin: auto 2rem;
+  padding: 3rem;
+  max-width: 90%;
+  background: rgba(14, 15, 17, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .panel-step-title {
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--text-main);
 }
 
 .panel-step-desc {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
@@ -109,14 +142,14 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .panel-bullets li {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   position: relative;
-  padding-left: 1.75rem;
+  padding-left: 1.5rem;
 }
 
 .panel-bullets li::before {
@@ -131,24 +164,38 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @media (max-width: 768px) {
   .steps-content-panels {
-    padding: 2rem;
-    min-height: auto;
+    padding: 0;
+    min-height: 420px;
+  }
+  .step-content-panel {
+    min-height: 420px;
+  }
+  .step-panel-inner {
+    margin: auto 1rem;
+    padding: 1.5rem;
+    max-width: 100%;
   }
   .step-menu-item {
     padding: 1rem;
     gap: 1rem;
   }
   .panel-step-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+  .panel-step-desc {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  .panel-bullets li {
+    font-size: 0.8rem;
   }
 }

@@ -9,6 +9,7 @@ import './components/solution.css';
 import './components/steps.css';
 import './components/classes.css';
 import './components/intensiv.css';
+import './components/vehicles.css';
 import './components/reviews.css';
 import './components/team.css';
 import './components/faq.css';
@@ -23,6 +24,7 @@ import solutionHtml from './components/solution.html?raw';
 import stepsHtml from './components/steps.html?raw';
 import classesHtml from './components/classes.html?raw';
 import intensivHtml from './components/intensiv.html?raw';
+import vehiclesHtml from './components/vehicles.html?raw';
 import reviewsHtml from './components/reviews.html?raw';
 import teamHtml from './components/team.html?raw';
 import faqHtml from './components/faq.html?raw';
@@ -49,6 +51,7 @@ if (app) {
       ${stepsHtml}
       ${classesHtml}
       ${intensivHtml}
+      ${vehiclesHtml}
       ${reviewsHtml}
       ${teamHtml}
       ${faqHtml}
