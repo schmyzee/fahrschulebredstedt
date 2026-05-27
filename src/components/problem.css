@@ -1,0 +1,92 @@
+.problem-section {
+  background-color: var(--bg-darker);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section-header {
+  margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.section-tagline {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.section-description {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+.problem-grid {
+  margin-top: 2rem;
+}
+
+.problem-card {
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Tilted card alignment offsets for DESIGN_VARIANCE > 4 */
+.problem-grid .problem-card:nth-child(even) {
+  margin-top: 1.5rem;
+}
+
+.card-num {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(var(--accent-rgb), 0.05);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+  user-select: none;
+  transition: var(--transition-smooth);
+}
+
+.problem-card:hover .card-num {
+  color: rgba(var(--accent-rgb), 0.12);
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .problem-card {
+    padding: 2rem;
+  }
+  .problem-grid .problem-card:nth-child(even) {
+    margin-top: 0;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+}

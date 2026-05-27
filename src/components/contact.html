@@ -1,0 +1,103 @@
+<section id="contact" class="section contact-section">
+  <!-- Dynamic glow in background -->
+  <div class="contact-bg-glow"></div>
+
+  <div class="container grid-2">
+    <div class="contact-info reveal delay-100">
+      <span class="section-tagline">Starte jetzt durch</span>
+      <h2 class="section-title">Bereit für deinen <span class="text-accent">Führerschein?</span></h2>
+      <p class="section-description">
+        Schreib uns kurz deine Wünsche. Wir prüfen die nächsten freien Ausbildungsplätze und melden uns innerhalb von 24 Stunden mit einem konkreten Fahrplan bei dir — unverbindlich und kostenfrei.
+      </p>
+
+      <div class="direct-contacts">
+        <div class="contact-method-card glass-panel">
+          <svg viewBox="0 0 24 24" class="method-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="var(--accent)"/></svg>
+          <div class="method-details">
+            <span class="method-lbl">Ruf uns an</span>
+            <a href="tel:046715500" class="method-link">04671 / 5500</a>
+          </div>
+        </div>
+
+        <div class="contact-method-card glass-panel">
+          <svg viewBox="0 0 24 24" class="method-icon"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="var(--accent)"/></svg>
+          <div class="method-details">
+            <span class="method-lbl">Schreib uns eine E-Mail</span>
+            <a href="mailto:info@fahrschule-hansen.de" class="method-link">info@fahrschule-hansen.de</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prequalification Form -->
+    <div class="contact-form-wrapper reveal delay-300">
+      <form class="prequal-form glass-panel" id="prequal-contact-form">
+        <h3 class="form-title">Unverbindliche Anfrage</h3>
+        
+        <div class="form-grid">
+          <!-- License Category -->
+          <div class="form-group">
+            <label for="form-class" class="form-label">Gewünschte Klasse</label>
+            <select id="form-class" class="form-input" required>
+              <option value="" disabled selected>Bitte auswählen...</option>
+              <option value="B">Auto: B / BF17 (Schalter)</option>
+              <option value="B197">Auto: B197 (Automatik & Schalter)</option>
+              <option value="BE">Anhänger: BE</option>
+              <option value="A">Motorrad: A / A2 / A1 / AM</option>
+              <option value="Mofa">Mofa-Prüfbescheinigung</option>
+              <option value="T">Traktor: T / L</option>
+            </select>
+          </div>
+
+          <!-- Location Choice -->
+          <div class="form-group">
+            <label for="form-location" class="form-label">Bevorzugter Standort</label>
+            <select id="form-location" class="form-input" required>
+              <option value="" disabled selected>Bitte auswählen...</option>
+              <option value="Bredstedt">Bredstedt (Markt 30)</option>
+              <option value="Viöl">Viöl (Westerende 2)</option>
+            </select>
+          </div>
+
+          <!-- Course Type -->
+          <div class="form-group">
+            <label for="form-type" class="form-label">Ausbildungsmodell</label>
+            <select id="form-type" class="form-input" required>
+              <option value="" disabled selected>Bitte auswählen...</option>
+              <option value="Normal">Normaler Unterricht (begleitend)</option>
+              <option value="Intensiv">Ferien- / Intensivkurs (kompakt)</option>
+            </select>
+          </div>
+
+          <!-- Contact Preference -->
+          <div class="form-group">
+            <label for="form-contact" class="form-label">Bevorzugter Kontaktweg</label>
+            <select id="form-contact" class="form-input" required>
+              <option value="" disabled selected>Bitte auswählen...</option>
+              <option value="WhatsApp">WhatsApp / Messenger</option>
+              <option value="Telefon">Anruf</option>
+              <option value="E-Mail">E-Mail</option>
+            </select>
+          </div>
+
+          <!-- Name -->
+          <div class="form-group full-width">
+            <label for="form-name" class="form-label">Dein vollständiger Name</label>
+            <input type="text" id="form-name" class="form-input" placeholder="z. B. Max Mustermann" required>
+          </div>
+
+          <!-- Contact number -->
+          <div class="form-group full-width">
+            <label for="form-phone" class="form-label">Telefonnummer / Mobilnummer</label>
+            <input type="tel" id="form-phone" class="form-input" placeholder="z. B. 0174 / 1234567" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit-btn" id="submit-btn-text">Anfrage absenden</button>
+        <p class="form-privacy-note">
+          Mit dem Absenden stimmst du der Verarbeitung deiner Daten gemäß unserer Datenschutzerklärung zu. Keine Werbeanrufe, nur Kontaktaufnahme zur Führerscheinberatung.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,221 @@
+.solution-section {
+  position: relative;
+  background-color: var(--bg-dark);
+}
+
+.solution-bg-glow {
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.solution-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 4rem;
+}
+
+.solution-block {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.solution-block.reverse {
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.solution-block.reverse .solution-info {
+  grid-column: 2;
+}
+
+.solution-block.reverse .solution-visual {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.usp-icon-wrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+  background: rgba(var(--accent-rgb), 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+}
+
+.usp-svg-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.usp-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.usp-text {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.usp-proof {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.proof-number {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.proof-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 20ch;
+}
+
+/* Solution Visual Card Panels */
+.solution-visual {
+  height: 250px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  background: rgba(22, 24, 27, 0.4);
+}
+
+.visual-badge {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  width: fit-content;
+  border: 1px solid rgba(var(--accent-rgb), 0.15);
+}
+
+.visual-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.visual-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Timeline visual details */
+.timeline-sample {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-pill);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.timeline-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 66%;
+  background: var(--accent);
+  border-radius: var(--radius-pill);
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  position: relative;
+}
+
+.timeline-dot.active {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+/* Pulse visual details */
+.pulse-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.pulse-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Price block visual details */
+.font-mono {
+  font-family: monospace;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  color: var(--text-muted);
+}
+
+.price-val {
+  color: var(--text-main);
+  font-weight: bold;
+}
+
+.border-top-line {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 1024px) {
+  .solution-block,
+  .solution-block.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .solution-block.reverse .solution-info {
+    grid-column: 1;
+  }
+  .solution-block.reverse .solution-visual {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .solution-visual {
+    height: 200px;
+  }
+}
